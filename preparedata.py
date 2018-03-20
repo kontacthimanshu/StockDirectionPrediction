@@ -28,7 +28,6 @@ class ProcessBhavCopy:
 				for file in archive.namelist():
 					if file.startswith('Pd'+fileDate):
 						archive.extract(file,'./Data/csvfiles')
-						self.extractstockframes('/Data/csvfiles/Pd'+fileDate+'.csv',fileDate)
 		except FileNotFoundError:
 			print("Could not find file for date: "+ fileDate)
 	
