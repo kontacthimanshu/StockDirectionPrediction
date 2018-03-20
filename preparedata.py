@@ -78,7 +78,7 @@ class ProcessBhavCopy:
 
 	def fromDate(self):
 		inputDate = datetime.datetime.strptime(self.startDate, '%d%m%y').date()
-		if inputDate >= datetime.date.today():
+		if inputDate > datetime.date.today():
 			print('Input date cannot be greater than todays date.')
 		else:
 			nextDate = self.startDate
